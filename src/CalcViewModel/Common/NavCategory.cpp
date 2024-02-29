@@ -1,4 +1,4 @@
-﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
 #include "pch.h"
@@ -49,7 +49,7 @@ static constexpr int CURRENCY_ID = 16;
 // ^^^ THESE CONSTANTS SHOULD NEVER CHANGE ^^^
 
 // The order of items in this list determines the order of items in the menu.
-static constexpr array<const NavCategoryInitializer, 17> s_categoryManifest = { NavCategoryInitializer{ ViewMode::Standard,
+static constexpr array<const NavCategoryInitializer, 2> s_categoryManifest = { NavCategoryInitializer{ ViewMode::Standard,
                                                                                                         STANDARD_ID,
                                                                                                         L"Standard",
                                                                                                         L"StandardMode",
@@ -64,7 +64,8 @@ static constexpr array<const NavCategoryInitializer, 17> s_categoryManifest = { 
                                                                                                         L"\uF196",
                                                                                                         CategoryGroupType::Calculator,
                                                                                                         MyVirtualKey::Number2,
-                                                                                                        SUPPORTS_ALL },
+                                                                                                        SUPPORTS_ALL } };
+                                                                                /*
                                                                                 NavCategoryInitializer{ ViewMode::Programmer,
                                                                                                         PROGRAMMER_ID,
                                                                                                         L"Programmer",
@@ -184,7 +185,7 @@ static constexpr array<const NavCategoryInitializer, 17> s_categoryManifest = { 
                                                                                                         L"\uF515",
                                                                                                         CategoryGroupType::Converter,
                                                                                                         MyVirtualKey::None,
-                                                                                                        POSITIVE_ONLY } };
+                                                                                                        POSITIVE_ONLY } };*/
 
 // This function should only be used when storing the mode to app data.
 int NavCategory::Serialize(ViewMode mode)
@@ -406,7 +407,6 @@ IObservableVector<NavCategoryGroup ^> ^ NavCategoryGroup::CreateMenuOptions()
 {
     auto menuOptions = ref new Vector<NavCategoryGroup ^>();
     menuOptions->Append(CreateCalculatorCategory());
-    menuOptions->Append(CreateConverterCategory());
     return menuOptions;
 }
 

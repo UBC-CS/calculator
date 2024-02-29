@@ -216,9 +216,6 @@
     <ClInclude Include="DataLoaders\DataLoaderMockConstants.h">
       <Filter>DataLoaders</Filter>
     </ClInclude>
-    <ClInclude Include="DataLoaders\DataLoaderConstants.h">
-      <Filter>DataLoaders</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="DataLoaders\DefaultFromToCurrency.json">
