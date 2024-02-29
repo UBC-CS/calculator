@@ -393,6 +393,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="TemporaryKey.pfx" />
+    <None Include="Calculator_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Views\Calculator.xaml">
