@@ -125,69 +125,9 @@
                                IsTextSelectionEnabled="True"/>
                     <toolkit:SettingsExpander.Items>
                         <toolkit:SettingsCard ContentAlignment="Left">
-                            <StackPanel Margin="0,4,0,6"
-                                        Orientation="Vertical"
-                                        Spacing="12">
-
-                                <HyperlinkButton x:Name="AboutEULA"
-                                                 Padding="0"
-                                                 NavigateUri="https://go.microsoft.com/fwlink/?LinkID=529064"
-                                                 ToolTipService.ToolTip="https://go.microsoft.com/fwlink/?LinkID=529064">
-                                    <TextBlock FontSize="{ThemeResource BodyFontSize}"
-                                               Text="{utils:ResourceString Name=AboutEULA/Text}"
-                                               TextWrapping="Wrap"/>
-                                </HyperlinkButton>
-
-                                <HyperlinkButton x:Name="AboutControlServicesAgreement"
-                                                 Padding="0"
-                                                 NavigateUri="https://go.microsoft.com/fwlink/?LinkID=822631"
-                                                 ToolTipService.ToolTip="https://go.microsoft.com/fwlink/?LinkID=822631">
-                                    <TextBlock FontSize="{ThemeResource BodyFontSize}"
-                                               Text="{utils:ResourceString Name=AboutControlServicesAgreement/Text}"
-                                               TextWrapping="Wrap"/>
-                                </HyperlinkButton>
-
-                                <HyperlinkButton x:Name="AboutControlPrivacyStatement"
-                                                 Padding="0"
-                                                 NavigateUri="https://go.microsoft.com/fwlink/?LinkID=521839"
-                                                 ToolTipService.ToolTip="https://go.microsoft.com/fwlink/?LinkID=521839">
-                                    <TextBlock FontSize="{ThemeResource BodyFontSize}"
-                                               Text="{utils:ResourceString Name=AboutControlPrivacyStatement/Text}"
-                                               TextWrapping="Wrap"/>
-                                </HyperlinkButton>
-                            </StackPanel>
                         </toolkit:SettingsCard>
                     </toolkit:SettingsExpander.Items>
                 </toolkit:SettingsExpander>
-
-                <HyperlinkButton x:Name="FeedbackButton"
-                                 MinWidth="120"
-                                 Margin="-12,4,0,0"
-                                 HorizontalAlignment="Left"
-                                 VerticalAlignment="Top"
-                                 FontSize="{StaticResource BodyFontSize}"
-                                 Click="FeedbackButton_Click"
-                                 Content="{utils:ResourceString Name=FeedbackButton/Content}"/>
-
-                <RichTextBlock x:Name="AboutContribute"
-                               Grid.Row="2"
-                               Margin="1,9,0,0"
-                               Style="{StaticResource SettingsRichTextBlockStyle}">
-                    <Paragraph>
-                        <!--
-                            Note: don't put Hyperlink element start to the next line
-                            otherwise unexpected whitespace will be add.
-                        -->
-                        <Run x:Name="ContributeRunBeforeLink"/><Hyperlink Foreground="{x:Bind AboutEULA.Foreground, Mode=OneWay}"
-                                   NavigateUri="https://go.microsoft.com/fwlink/?linkid=2099939"
-                                   TextDecorations="None"
-                                   ToolTipService.ToolTip="https://go.microsoft.com/fwlink/?linkid=2099939"
-                                   UnderlineStyle="None">
-                            <Run x:Name="ContributeRunLink"/>
-                        </Hyperlink><Run x:Name="ContributeRunAfterLink"/>
-                    </Paragraph>
-                </RichTextBlock>
-
             </StackPanel>
         </ScrollViewer>
     </Grid>

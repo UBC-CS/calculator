@@ -243,7 +243,10 @@ namespace CalculatorApp
                         return false;
                     }
                 });
-                graphCategory.IsEnabled = NavCategoryStates.IsViewModeEnabled(ViewMode.Graphing);
+                if (graphCategory != null)
+                {
+                    graphCategory.IsEnabled = NavCategoryStates.IsViewModeEnabled(ViewMode.Graphing);
+                }
             });
         }
 

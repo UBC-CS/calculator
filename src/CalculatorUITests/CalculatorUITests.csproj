@@ -10,9 +10,6 @@
     <PackageReference Include="Appium.WebDriver" Version="4.4.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CalculatorUITestFramework\CalculatorUITestFramework.csproj" />
-  </ItemGroup>
-  <ItemGroup>
     <None Update="CalculatorUITests.ci-internal.runsettings">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

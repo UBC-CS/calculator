@@ -113,31 +113,7 @@ namespace CalculatorApp
         }
 
         private void InitializeContributeTextBlock()
-        {
-            var resProvider = AppResourceProvider.GetInstance();
-            string contributeHyperlinkText = resProvider.GetResourceString("AboutControlContribute");
-
-            // The resource string has the 'GitHub' hyperlink wrapped with '%HL%'.
-            // Break the string and assign pieces appropriately.
-            string delimiter = "%HL%";
-            int delimiterLength = delimiter.Length;
-
-            // Find the delimiters.
-            int firstSplitPosition = contributeHyperlinkText.IndexOf(delimiter, 0);
-            Debug.Assert(firstSplitPosition != -1);
-            int secondSplitPosition = contributeHyperlinkText.IndexOf(delimiter, firstSplitPosition + 1);
-            Debug.Assert(secondSplitPosition != -1);
-            int hyperlinkTextLength = secondSplitPosition - (firstSplitPosition + delimiterLength);
-
-            // Assign pieces.
-            var contributeTextBeforeHyperlink = contributeHyperlinkText.Substring(0, firstSplitPosition);
-            var contributeTextLink = contributeHyperlinkText.Substring(firstSplitPosition + delimiterLength, hyperlinkTextLength);
-            var contributeTextAfterHyperlink = contributeHyperlinkText.Substring(secondSplitPosition + delimiterLength);
-
-            ContributeRunBeforeLink.Text = contributeTextBeforeHyperlink;
-            ContributeRunLink.Text = contributeTextLink;
-            ContributeRunAfterLink.Text = contributeTextAfterHyperlink;
-        }
+        {}
 
         private void System_BackRequested(object sender, BackRequestedEventArgs e)
         {
